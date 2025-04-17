@@ -1,4 +1,7 @@
-// consumer.js
+// This code is a simple consumer that listens for messages on a RabbitMQ queue and processes them. 
+// It uses the amqplib library to connect to RabbitMQ and consume messages from the queue. 
+// The consumer will acknowledge the message only if the input number is 7.
+
 const amqp = require("amqplib");
 
 async function connect() {

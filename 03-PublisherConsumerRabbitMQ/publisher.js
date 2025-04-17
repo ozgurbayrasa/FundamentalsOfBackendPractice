@@ -1,5 +1,5 @@
-// publisher.js
-
+// This is a simple publisher that sends a message to a RabbitMQ queue.
+// It uses the amqplib library to connect to RabbitMQ and send a message.
 const amqp = require("amqplib");
 
 const msg = { number: process.argv[2] };
