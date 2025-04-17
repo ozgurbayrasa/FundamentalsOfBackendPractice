@@ -18,6 +18,7 @@ async function connect() {
 
       if (input.number == 7) {
         channel.ack(message);
+        console.log(`Job ${input.number} processed and acknowledged`)
       }
     });
 
