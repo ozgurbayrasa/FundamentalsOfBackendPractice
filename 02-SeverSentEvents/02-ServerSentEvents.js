@@ -2,9 +2,6 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 
-
-
-// SSE endpoint
 app.get("/events", (req, res) => {
   res.setHeader("Content-Type", "text/event-stream");
 
@@ -16,7 +13,7 @@ app.get("/events", (req, res) => {
     res.write(`data: ${JSON.stringify({ message: "Merhaba", count: counter })}\n\n`);
   }, 1000);
 
-  // Bağlantı kapanırsa interval temizlenmeli
+
   req.on("close", () => {
     clearInterval(intervalId);
     res.end();
